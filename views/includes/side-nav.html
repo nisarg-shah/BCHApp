@@ -1,14 +1,14 @@
 <nav class="nav-primary hidden-xs">
     <div class="text-muted text-sm hidden-nav-xs padder m-t-sm m-b-sm">Start</div>
     <ul class="nav nav-main" data-ride="collapse">
-        <li  class="active">
-            <a href="index.html" class="auto">
+        <li ui-sref-active="active">
+            <a ui-sref="overview">
                 <i class="i i-statistics icon">
                 </i>
                 <span class="font-bold">Overview</span>
             </a>
         </li>
-        <li >
+        <li ui-sref-active="active">
             <a href="#" class="auto">
                         <span class="pull-right text-muted">
                           <i class="i i-circle-sm-o text"></i>
@@ -19,15 +19,15 @@
                 <span class="font-bold">Client</span>
             </a>
             <ul class="nav dk">
-                <li >
-                    <a href="layout-color.html" class="auto">
+                <li ui-sref-active="active">
+                    <a ui-sref="create_new_client">
                         <i class="i i-dot"></i>
 
                         <span>Create New</span>
                     </a>
                 </li>
-                <li >
-                    <a href="layout-hbox.html" class="auto">
+                <li ui-sref-active="active">
+                    <a ui-sref="history_client" class="auto">
                         <i class="i i-dot"></i>
 
                         <span>History</span>

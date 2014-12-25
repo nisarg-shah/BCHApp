@@ -12,7 +12,13 @@ angular
         $stateProvider
             .state('overview',{
                 url: '/',
-                templateUrl: 'partials/overview.html'
+                templateUrl: 'views/overview.html'
+            }).state('create_new_client',{
+                url: '/create_new_client',
+                templateUrl: 'views/client/create_new_client.html'
             })
-    }])
-
+            .state('history_client',{
+                url: '/history_client',
+                templateUrl: 'views/client/history_client.html'
+            })
+    }]);
