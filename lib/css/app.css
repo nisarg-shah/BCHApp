@@ -22,6 +22,11 @@ a {
   color: #3c4144;
   text-decoration: none;
 }
+
+#sub-menu{
+  margin-left: 10%;
+}
+
 a:hover,
 a:focus {
   color: #181a1c;

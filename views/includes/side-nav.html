@@ -1,6 +1,8 @@
 <nav class="nav-primary hidden-xs">
     <div class="text-muted text-sm hidden-nav-xs padder m-t-sm m-b-sm">Start</div>
     <ul class="nav nav-main" data-ride="collapse">
+
+
         <li ui-sref-active="active">
             <a ui-sref="overview">
                 <i class="i i-statistics icon">
@@ -8,71 +10,95 @@
                 <span class="font-bold">Overview</span>
             </a>
         </li>
+
+
         <li ui-sref-active="active">
-            <a href="#" class="auto">
+            <a ui-sref="client" class="auto">
                         <span class="pull-right text-muted">
                           <i class="i i-circle-sm-o text"></i>
                           <i class="i i-circle-sm text-active"></i>
                         </span>
-                <i class="i i-stack icon">
+                <i class="i i-users3 icon">
                 </i>
                 <span class="font-bold">Client</span>
             </a>
-            <ul class="nav dk">
-                <li ui-sref-active="active">
-                    <a ui-sref="create_new_client">
-                        <i class="i i-dot"></i>
-
-                        <span>Create New</span>
-                    </a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="history_client" class="auto">
-                        <i class="i i-dot"></i>
-
-                        <span>History</span>
-                    </a>
-                </li>
-            </ul>
         </li>
-        <li >
-            <a href="#" class="auto">
+        <li ui-sref-active="active" id="sub-menu">
+            <a ui-sref="client_add" class="auto">
                         <span class="pull-right text-muted">
                           <i class="i i-circle-sm-o text"></i>
                           <i class="i i-circle-sm text-active"></i>
                         </span>
-                <i class="i i-lab icon">
+
+                <i class="i i-arrow-down-right icon">
+                </i>
+                <span class="i i-file-plus icon"> </span><span class="font-bold"> Add new Client</span>
+            </a>
+        </li>
+        <li ui-sref-active="active" id="sub-menu">
+            <a ui-sref="client_history" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="i i-circle-sm-o text"></i>
+                          <i class="i i-circle-sm text-active"></i>
+                        </span>
+                <i class="i i-arrow-down-right icon">
+                </i>
+                <span class="i i-history icon"> </span><span class="font-bold"> Client History</span>
+            </a>
+        </li>
+
+
+        <li ui-sref-active="active">
+            <a ui-sref="history_client">
+                        <span class="pull-right text-muted">
+                          <i class="i i-circle-sm-o text"></i>
+                          <i class="i i-circle-sm text-active"></i>
+                        </span>
+                <i class="i i-cart icon">
                 </i>
                 <span class="font-bold">Order</span>
             </a>
-
         </li>
-        <li >
-            <a href="#" class="auto">
+
+
+
+
+
+        <li ui-sref-active="active">
+            <a ui-sref="inventory" class="auto">
                         <span class="pull-right text-muted">
                           <i class="i i-circle-sm-o text"></i>
                           <i class="i i-circle-sm text-active"></i>
                         </span>
-                <i class="i i-docs icon">
+                <i class="i i-list icon">
                 </i>
                 <span class="font-bold">Inventory</span>
             </a>
-            <ul class="nav dk">
-                <li >
-                    <a href="profile.html" class="auto">
-                        <i class="i i-dot"></i>
-
-                        <span>Add New</span>
-                    </a>
-                </li>
-                <li >
-                    <a href="invoice.html" class="auto">
-                        <i class="i i-dot"></i>
-
-                        <span>To buy</span>
-                    </a>
-                </li>
-            </ul>
         </li>
+        <li ui-sref-active="active" id="sub-menu">
+            <a ui-sref="inventory_add" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="i i-circle-sm-o text"></i>
+                          <i class="i i-circle-sm text-active"></i>
+                        </span>
+
+                <i class="i i-arrow-down-right icon">
+                </i>
+                <span class="i i-file-plus icon"> </span><span class="font-bold"> Inventory Add</span>
+            </a>
+        </li>
+        <li ui-sref-active="active" id="sub-menu">
+            <a ui-sref="to_buy" class="auto">
+                        <span class="pull-right text-muted">
+                          <i class="i i-circle-sm-o text"></i>
+                          <i class="i i-circle-sm text-active"></i>
+                        </span>
+                <i class="i i-arrow-down-right icon">
+                </i>
+                <span class="i i-notification icon"> </span><span class="font-bold"> To-Buy</span>
+            </a>
+        </li>
+
+
     </ul>
 </nav>

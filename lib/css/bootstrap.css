@@ -5641,6 +5641,12 @@ button.close {
   margin-right: auto;
   margin-left: auto;
 }
+.error{
+  color: red;
+}
+.success{
+  color: green;
+}
 .pull-right {
   float: right !important;
 }
