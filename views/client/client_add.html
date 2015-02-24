@@ -1,0 +1,94 @@
+ <div id="wrapper" >
+    <div ng-include="'views/includes/nav.html'"></div>
+    <div id="page-wrapper" style="height: 600px;">
+
+        <div class="container-fluid"> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Client: Add
+                    </h1>
+                    <hr/>
+                    <div class="col-lg-9" ng-controller="clientAddFormCtrl">
+                        <form novalidate class="form-horizontal" name="clientAddForm">
+                            <div class="form-group has-feedback "
+                                 ng-class="{'has-error':clientAddForm.phoneNo.$invalid && clientAddForm.phoneNo.$touched,
+                                            'has-success':!clientAddForm.phoneNo.$invalid && clientAddForm.phoneNo.$touched}">
+                                <label for="phoneNo" class="control-label col-md-2">Phone no</label>
+                                <div class="col-md-4">
+                                    <input id="phoneNo" name="phoneNo" type="number" class="form-control" ng-model="user.phoneNo" required />
+                                    <div ng-show="clientAddForm.phoneNo.$invalid && clientAddForm.phoneNo.$touched">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p ng-show="clientAddForm.phoneNo.$error.required && clientAddForm.phoneNo.$touched" class="help-block">
+                                            Phone no cannot be blank
+                                        </p>
+                                        <p ng-show="clientAddForm.phoneNo.$error.number && clientAddForm.phoneNo.$touched" class="help-block">
+                                            Phone no is invalid
+                                        </p>
+                                    </div>
+                                    <div ng-show="clientAddForm.phoneNo.$valid && clientAddForm.phoneNo.$touched">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback "
+                                 ng-class="{'has-error':clientAddForm.userName.$error.required && clientAddForm.userName.$touched,
+                                            'has-success':!clientAddForm.userName.$error.required && clientAddForm.userName.$touched}">
+                                <label for="userName" class="control-label col-md-2">Name</label>
+                                <div class="col-md-4">
+                                    <input id="userName" name="userName" type="text" class="form-control" ng-model="user.name" required />
+                                    <div ng-show="clientAddForm.userName.$invalid && clientAddForm.userName.$touched">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p ng-show="clientAddForm.userName.$invalid && clientAddForm.userName.$touched" class="help-block">
+                                            User Name cannot be blank
+                                        </p>
+                                    </div>
+                                    <div ng-show="clientAddForm.userName.$valid && clientAddForm.userName.$touched">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback "
+                                 ng-class="{'has-error':clientAddForm.Email.$error.email && clientAddForm.Email.$touched,
+                                    'has-success':!clientAddForm.Email.$error.email && clientAddForm.Email.$touched && clientAddForm.Email.$dirty}">
+                                <label for="email" class="control-label col-md-2">E-mail</label>
+                                <div class="col-md-4">
+                                    <input id="email" type="email"  name="Email" class="form-control" ng-model="user.email" />
+                                    <div ng-show="clientAddForm.Email.$invalid && clientAddForm.Email.$touched">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p class="help-block">
+                                            E-mail entered is invalid
+                                        </p>
+                                    </div>
+                                    <div ng-show="clientAddForm.Email.$valid && clientAddForm.Email.$touched && clientAddForm.Email.$dirty">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="Address" class="control-label col-md-2">Address</label>
+                                <div class="col-md-4">
+                                    <textarea id="Address"  name="Address" class="form-control" ng-model="user.address"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                <input type="button"  class="btn btn-warning" ng-click="reset()" value="Reset" />
+                                <input type="submit"  class="btn btn-success" ng-click="update(user)" value="Save" ng-disabled="clientAddForm.$invalid"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+  
+

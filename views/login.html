@@ -1,0 +1,83 @@
+
+	<!-- angularJS controllers --->
+	
+
+	<div class="container-fluid">
+		<!-- Page Heading -->
+		<div class="row" style="text-align: center;">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
+				<div id="page-wrapper">
+					<h1 class="page-header">
+						Log-In						
+					</h1>
+					<h4>Please enter the details below.</h4>
+					<div ng-controller="clientAddFormCtrl">
+                         <div class="col-md-2"></div>
+						<form novalidate class="form-horizontal" name="clientAddForm" action="http://localhost/backend/index.php/user/login"> 
+                            <div class="form-group has-feedback "
+                                 ng-class="{'has-error':clientAddForm.Email.$error.email && clientAddForm.Email.$touched || clientAddForm.Email.$error.required && clientAddForm.Email.$touched,
+                                    'has-success':!clientAddForm.Email.$error.email && clientAddForm.Email.$touched && clientAddForm.Email.$dirty}">
+                                <label for="email" class="control-label col-md-2">E-mail</label>
+                                <div class="col-md-5">
+                                    <input id="email" type="email"  name="Email" class="form-control" ng-model="user.email" required/>
+                                    <div ng-show="clientAddForm.Email.$error.required && clientAddForm.Email.$touched">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p class="help-block">
+                                            Please Enter Email.
+                                        </p>
+                                    </div>
+									<div ng-show="clientAddForm.Email.$invalid && clientAddForm.Email.$touched && clientAddForm.Email.$dirty">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p class="help-block">
+                                            E-mail entered is Invalid.
+                                        </p>
+                                    </div>
+                                    <div ng-show="clientAddForm.Email.$valid && clientAddForm.Email.$touched && clientAddForm.Email.$dirty">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="col-md-2"></div>
+							<div class="form-group has-feedback "
+                                 ng-class="{'has-error': clientAddForm.password.$error.required && clientAddForm.password.$touched,
+                                    'has-success': !clientAddForm.password.$error.required && clientAddForm.password.$touched }">
+                                <label for="password" class="control-label col-md-2">Password</label>
+                                <div class="col-md-5">
+                                    <input id="password" type="password"  name="password" class="form-control" ng-model="user.password" required/>
+                                    <div ng-show="clientAddForm.password.$error.required && clientAddForm.password.$touched">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(error)</span>
+                                        <p class="help-block">
+                                            Please Enter password.
+                                        </p>
+                                    </div>
+                                    <div ng-show="!clientAddForm.password.$error.required && clientAddForm.password.$touched">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                        <span class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                             								
+                                <input type="submit"  class="btn btn-success" value="LogIn" ng-disabled="clientAddForm.$invalid"/>
+                            
+							<div style="clear: both;">
+								<h3 class="page-header"> 
+									<small>
+										<a ui-sref="overview">Forgot Password.?</a>
+									</small>
+								</h3>
+							</div>
+                        </form>
+                    </div>
+				</div>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container-fluid -->
